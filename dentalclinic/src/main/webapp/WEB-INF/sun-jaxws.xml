@@ -9,4 +9,17 @@ url-pattern="/getPatientByCprNo"/>
 implementation = "webservices.PatientWebService" 
 url-pattern="/getAllPatientByCprNo"/>
 
+
+<endpoint name = "PatientWebService" 
+implementation = "webservices.DentistWebService" 
+url-pattern="/getDenist"/>
+<endpoint name = "PatientWebService" 
+implementation = "webservices.AddressWebservice" 
+url-pattern="/getAddress"/>
+<endpoint name = "PatientWebService" 
+implementation = "webservices.AppoinmentWebService " 
+url-pattern="/getAppointment"/>
+<endpoint name = "PatientWebService" 
+implementation = "webservices.BranchWebService" 
+url-pattern="/getBranch"/>
 </endpoints>
