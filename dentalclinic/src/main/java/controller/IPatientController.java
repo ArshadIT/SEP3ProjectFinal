@@ -13,7 +13,7 @@ public interface IPatientController {
 	
 	public void addPatient(Patient patient);
 	
-	public void removePatient(Patient patient);
+	public void removePatient(String cprNo);
 	
 	public Patient editPatient(Patient patient);
 	

@@ -21,22 +21,27 @@ public class PatientDAO implements IPatientDAO{
 	}
 	@Override
 	public void AddPatient(Patient patient) {
-	
-		
+		String sql = "INSERT INTO \"DentalClinic\".patient VALUES(" + patient.getFirstname()+ ",'" + patient.getLastName()
+		+ "','" + patient.getCprNo()+ "',"+ patient.getEmail() + "');";
+dbconn.WriteData(sql);
 	}
 
 
 
 	@Override
 	public void updatePatient(Patient patient) {
-		// TODO Auto-generated method stub
 		
+		String sql = "UPDATE \"DentalClinic\".patient "
+				+ " SET firstname ='"+patient.getFirstName()+"', lastname ='"+patient.getLastName()+"', cprNo='" +patient.getCprNo()+"', email ='"+patient.getEmail() +"', addressid= '" + patient.getAddressId() + ";";				
+				
+		dbconn.WriteData(sql);
 	}
 
 	@Override
 	public void deletePatient(String cprNo) {
-		// TODO Auto-generated method stub
+String sql = "Delete from \"DentalClinic\".patient where patient ="+ cprNo + ";";
 		
+		dbconn.WriteData(sql);
 	}
 //	@Override
 //	public Patient getPatientByCprNo(String cprNo) {
@@ -162,7 +167,7 @@ public class PatientDAO implements IPatientDAO{
 		int i =0;
 			Patient temPatient = null;
 
-		String sql = "select * from \"DentalClinic1\".patient where cprNo= '" + cprNo + "' ;";
+		String sql = "select * from \"DentalClinic\".patient where cprNo= '" + cprNo + "' ;";
 		
 		ResultSet rs = dbconn.retriveData(sql);
 		try {
@@ -171,10 +176,11 @@ public class PatientDAO implements IPatientDAO{
 				String lastName = rs.getString("lastName");
 					String cprNo1 = rs.getString("cprNo");
 					String email = rs.getString("email");
+					int addressId = rs.getInt("addressid");
 					i++;
 				//String Email = rs.getString("Email");
 				// String Address= rs.getString("Address");
-				temPatient= new Patient(firstName, lastName, cprNo,email);
+				temPatient= new Patient(firstName, lastName, cprNo,email, addressId);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -185,7 +191,7 @@ public class PatientDAO implements IPatientDAO{
 	@Override
 	public List<Patient> getAllPatientByCprNo() {
 		List<Patient> plist = new ArrayList<Patient>();
-		String sql = "select * from \"DentalClinic1\".patient;";
+		String sql = "select * from \"DentalClinic\".patient;";
 		ResultSet rs = dbconn.retriveData(sql);
 		try {
 			while(rs.next()) {
@@ -193,7 +199,8 @@ public class PatientDAO implements IPatientDAO{
 				String lastName = rs.getString("lastName");
 					String cprNo1 = rs.getString("cprNo");
 					String email = rs.getString("email");
-					plist.add(new Patient(firstName, lastName, cprNo1, email));
+					int addressId = rs.getInt("addressid");
+					plist.add(new Patient(firstName, lastName, cprNo1, email, addressId));
 			}
 			
 		} catch (Exception e) {

@@ -22,6 +22,13 @@ public interface IWebServicePatient {
 	@WebMethod
 	public List<Patient> getAllPatientByCprNo();
 
+	@WebMethod
+	public void deletePatient(String cprNo);
+
+	@WebMethod
+	public void updatePatient(Patient patient);
+
+
 	
 	}
 	

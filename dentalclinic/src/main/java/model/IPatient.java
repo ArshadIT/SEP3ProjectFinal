@@ -10,7 +10,5 @@ public interface IPatient {
 	
 	public String Email();
 	
-	public String getPassword();
-	
-	
+	public int AddressId();
 }
