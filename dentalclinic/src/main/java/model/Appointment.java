@@ -2,36 +2,87 @@ package model;
 
 import java.sql.Date;
 
-public class Appointment implements IAppoinment {
+public class Appointment implements IAppointment {
+
+	private int appointmentID;
+	private int dentistId;
+	private int DateAndTimeID;
+	private String CprNo;
+	private int branchID;
+
+	public Appointment(int appointmentID, int dentistId, int DateAndTimeID, String cprNo, int branchID) {
+
+		this.appointmentID = appointmentID;
+		this.dentistId = dentistId;
+		this.DateAndTimeID = DateAndTimeID;
+		CprNo = cprNo;
+		this.branchID = branchID;
+	}
+	//used for add methods.
+	public Appointment(int dentistId, int DateAndTimeID, String cprNo, int branchID) {
+		this.dentistId = dentistId;
+		this.DateAndTimeID = DateAndTimeID;
+		CprNo = cprNo;
+		this.branchID = branchID;
+	}
+
+	public Appointment(int appointmentID, int dentistId, int DateAndTimeID) {
+
+		this.appointmentID = appointmentID;
+		this.dentistId = dentistId;
+		this.DateAndTimeID = DateAndTimeID;
+
+	}
 
 	@Override
-	public int getAppointmentId() {
-		// TODO Auto-generated method stub
-		return 0;
+	public String toString() {
+		return "Appointment [appointmentID=" + appointmentID + ", dentistId=" + dentistId + ", DateAndTimeID="
+				+ DateAndTimeID + ", CprNo=" + CprNo + ", branchID=" + branchID + "]";
+	}
+
+	@Override
+	public int getAppointmentID() {
+		return appointmentID;
+	}
+
+	public void setAppointmentID(int appointmentID) {
+		this.appointmentID = appointmentID;
 	}
 
 	@Override
 	public int getDentistId() {
-		// TODO Auto-generated method stub
-		return 0;
+		return dentistId;
+	}
+
+	public void setDentistId(int dentistId) {
+		this.dentistId = dentistId;
 	}
 
 	@Override
-	public Date getDateAndTime() {
-		// TODO Auto-generated method stub
-		return null;
+	public int getDateAndTimeID() {
+		return DateAndTimeID;
+	}
+
+	public void setDateAndTimeD(int DateAndTimeID) {
+		this.DateAndTimeID = DateAndTimeID;
 	}
 
 	@Override
 	public String getCprNo() {
-		// TODO Auto-generated method stub
-		return null;
+		return CprNo;
+	}
+
+	public void setCprNo(String cprNo) {
+		CprNo = cprNo;
 	}
 
 	@Override
-	public int getBranchId() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getBranchID() {
+		return branchID;
+	}
+
+	public void setBranchID(int branchID) {
+		this.branchID = branchID;
 	}
 
 }

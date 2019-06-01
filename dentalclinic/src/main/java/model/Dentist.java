@@ -2,7 +2,7 @@ package model;
 
 import java.io.Serializable;
 
-public class Dentist implements  Serializable {
+public class Dentist implements IDentist,  Serializable {
 
 	/**
 	 * 
@@ -16,6 +16,13 @@ public class Dentist implements  Serializable {
 	private String specialty;
 	public Dentist( int empNo, String firstName, String lastName,int branchId, String specialty) {
 		this.empNo = empNo;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.branchId = branchId;
+		this.specialty = specialty;
+	}
+	public Dentist(  String firstName, String lastName,int branchId, String specialty) {
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.branchId = branchId;

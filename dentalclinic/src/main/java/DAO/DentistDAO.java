@@ -37,7 +37,6 @@ public class DentistDAO implements IDentistDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(tempDentist.getBranchId());
 		
 		
 		return tempDentist;
@@ -62,7 +61,7 @@ public class DentistDAO implements IDentistDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println(dentistList.size());
+		
 		return dentistList;
 	}
 	public List <Dentist> getAllDentistByBranchId(int branchId) {
@@ -91,7 +90,7 @@ public class DentistDAO implements IDentistDAO {
 	
 	public void AddDentist(Dentist newDentist) {
 
-		String sql = "INSERT INTO \"DentalClinic\".dentist VALUES(" + newDentist.getEmpNo() + ",'" + newDentist.getFirstName()
+		String sql = "INSERT INTO \"DentalClinic\".dentist VALUES(Default,'" + newDentist.getFirstName()
 				+ "','" + newDentist.getLastName() + "',"+ newDentist.getBranchId()+ ",'" + newDentist.getSpecialty() + "');";
 		dbconn.WriteData(sql);
 
