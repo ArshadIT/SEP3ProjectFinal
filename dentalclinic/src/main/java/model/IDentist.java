@@ -6,4 +6,5 @@ public interface IDentist {
 	public String getLastName();
 	public int getBranchId();
 	public String getSpecialty();
+	public int deleteafterpull();
 }
