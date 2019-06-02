@@ -7,7 +7,6 @@ import model.Patient;
 
 public class PatientControllerImp  implements IPatientDAO{
 
-	private IPatientController patientController;
 		public void AddPatient(Patient patient) {
 		IPatientDAO patients = new PatientDAO();
 		patients.AddPatient(patient);
@@ -23,13 +22,13 @@ public class PatientControllerImp  implements IPatientDAO{
 
 	
 	public void updatePatient(Patient patient) {
-		patientController.editPatient(patient);
+		// TODO Auto-generated method stub
 		
 	}
 
 	
 	public void deletePatient(String cprNo) {
-				patientController.removePatient(cprNo);
+				
 	}
 
 

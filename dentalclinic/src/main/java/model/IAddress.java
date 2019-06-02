@@ -7,5 +7,4 @@ public interface IAddress {
 	public String getStreetNo();
 	public String getPostalCode();
 	public String getCity();
-	
 }

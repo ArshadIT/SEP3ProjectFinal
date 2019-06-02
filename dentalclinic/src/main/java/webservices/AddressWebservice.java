@@ -1,43 +1,33 @@
 package webservices;
 
-import java.util.List;
-
 import javax.jws.WebService;
 
-import controller.AppointmentController;
-import controller.IAddressController;
 import model.Address;
 @WebService(endpointInterface = "webservices.IWebServiceAddress")
 public class AddressWebservice implements IWebServiceAddress {
 
-	private IAddressController addressController;
 	@Override
 	public void AddAdress(Address address) {
-	addressController.AddAdress(address);
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
-	public void deleteAddress(Address addressId) {
-		addressController.AddAdress(addressId);
+	public void deleteAddress(Address address) {
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
 	public void EditAddress(Address address) {
-		addressController.EditAddress(address);
-	}
+		// TODO Auto-generated method stub
 
-	
-
-	@Override
-	public List<Address> getAllAddressById() {
-		
-		return addressController.getAllAddress();
 	}
 
 	@Override
 	public Address getAddress(int addressId) {
-		
-		return addressController.getAddress(addressId);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

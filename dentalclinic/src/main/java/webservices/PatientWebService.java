@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.jws.WebService;
 
-import DAO.IPatientDAO;
 import controller.PatientControllerImp;
 import model.Patient;
 
@@ -14,7 +13,6 @@ import model.Patient;
 
 public class PatientWebService implements IWebServicePatient {
 
-	private IPatientDAO patientService;
 	
 	public void AddPatient(Patient patient) {
 		Patient patient1 = new Patient();
@@ -32,18 +30,6 @@ public class PatientWebService implements IWebServicePatient {
 	public List<Patient> getAllPatientByCprNo() {
 		PatientControllerImp patientController = new PatientControllerImp();
 		return patientController.getAllPatientByCprNo();
-	}
-
-	@Override
-	public void deletePatient(String cprNo) {
-		patientService.deletePatient(cprNo);
-		
-	}
-
-	@Override
-	public void updatePatient(Patient patient) {
-		patientService.updatePatient(patient);
-		
 	}
 
 	
