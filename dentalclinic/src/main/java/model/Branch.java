@@ -1,30 +1,42 @@
 package model;
 
 public class Branch implements IBranch {
+private int BranchId;
+private String branchName;
+private String phoneNumber;
+private String branchEmail;
+@Override
+public int getBranchId() {
+	return BranchId;
+}
+public void setBranchId(int branchId) {
+	BranchId = branchId;
+}
+@Override
+public String getBranchName() {
+	return branchName;
+}
+public void setBranchName(String branchName) {
+	this.branchName = branchName;
+}
+@Override
+public String getPhoneNumber() {
+	return phoneNumber;
+}
+public void setPhoneNo(String phoneNumber) {
+	this.phoneNumber = phoneNumber;
+}
+@Override
+public String getBranchEmail() {
+	return branchEmail;
+}
+public void setBranchEmail(String branchEmail) {
+	this.branchEmail = branchEmail;
+}
+	
+	
+	
 
-	@Override
-	public int BranchId() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	// it brach r there please have it 
-	@Override
-	public String getBranchName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getPhoneNumber() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getBranchEmail() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }

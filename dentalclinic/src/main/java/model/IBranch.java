@@ -1,7 +1,7 @@
 package model;
 
 public interface IBranch {
-	public int BranchId();
+	public int getBranchId();
 
 	public String getBranchName();
 
