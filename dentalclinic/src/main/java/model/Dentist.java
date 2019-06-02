@@ -33,7 +33,7 @@ public class Dentist implements IDentist,  Serializable {
 	}
 	public void setEmpNo(int empNo) {
 		this.empNo = empNo;
-	}
+	}/* new comment*/
 	public String getFirstName() {
 		return firstName;
 	}

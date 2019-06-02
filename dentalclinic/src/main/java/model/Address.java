@@ -1,60 +1,83 @@
 package model;
 
-public class Address implements IAddress {
- private int AddressId;
+import java.io.Serializable;
+
+public class Address implements IAddress, Serializable {
+ /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private int AddressId;
  private String streetName;
  private String streetNo;
  private String postalCode;
  private String city;
-
-	public void setAddressId(int addressId) {
+ 
+ 
+public Address() {
+	
+}
+public Address(int addressId, String streetName, String streetNo, String postalCode, String city) {
+	
 	AddressId = addressId;
-}
-
-public void setStreetName(String streetName) {
 	this.streetName = streetName;
-}
-
-public void setStreetNo(String streetNo) {
 	this.streetNo = streetNo;
-}
-
-public void setPostalCode(String postalCode) {
 	this.postalCode = postalCode;
+	this.city = city;
 }
-
-public void setCity(String city) {
+public Address(String streetName, String streetNo, String postalCode, String city) {
+	
+	this.streetName = streetName;
+	this.streetNo = streetNo;
+	this.postalCode = postalCode;
 	this.city = city;
 }
 
-	@Override
-	public int getAddressId() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+@Override
+public int getAddressId() {
+	
+	return AddressId;
+}
+@Override
+public String getStreetName() {
+	
+	return streetName;
+}
+@Override
+public String getStreetNo() {
+	
+	return streetNo;
+}
+@Override
+public String getPostalCode() {
+	
+	return postalCode;
+}
+@Override
+public String getCity() {
+	
+	return city;
+}
+public void setAddressId(int addressId) {
+	AddressId = addressId;
+}
+public void setStreetName(String streetName) {
+	this.streetName = streetName;
+}
+public void setStreetNo(String streetNo) {
+	this.streetNo = streetNo;
+}
+public void setPostalCode(String postalCode) {
+	this.postalCode = postalCode;
+}
+public void setCity(String city) {
+	this.city = city;
+}
+@Override
+public String toString() {
+	return "Address [streetName=" + streetName + ", streetNo=" + streetNo + ", postalCode=" + postalCode + ", city="
+			+ city + "]";
+}
 
-	@Override
-	public String getStreetName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getStreetNo() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getPostalCode() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getCity() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

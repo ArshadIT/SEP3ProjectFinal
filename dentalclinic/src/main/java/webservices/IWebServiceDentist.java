@@ -20,5 +20,7 @@ public interface IWebServiceDentist {
 	public Dentist getDentisttByDentistId(int dentistId);
 	@WebMethod
 	public List<Dentist> getAllDentist();
+	@WebMethod
+	public void EditDentist(Dentist dentist);
 
 }

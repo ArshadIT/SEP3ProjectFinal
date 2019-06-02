@@ -15,7 +15,7 @@ public class DentistWebService implements IWebServiceDentist {
 	 dentistcontroller = new DentistControllerImp();}
 	@Override
 	public void AddDentist(Dentist newDentist) {
-		
+		dentistcontroller.AddDentist(newDentist);
 	}
 
 	@Override

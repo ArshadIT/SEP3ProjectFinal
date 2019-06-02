@@ -6,4 +6,4 @@ public interface IDentist {
 	public String getLastName();
 	public int getBranchId();
 	public String getSpecialty();
-}
+}/*added so I can commit*/

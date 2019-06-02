@@ -10,7 +10,7 @@ public class DatabaseConnection {
 
 	private final static String ConnectString = "jbbc:postgresql://localhost:5432/postgres";
 	private final static String userName = "postgres";
-	private final static String password = "2699";
+	private final static String password = "1234";
 	
 	private static Connection conn;
 	

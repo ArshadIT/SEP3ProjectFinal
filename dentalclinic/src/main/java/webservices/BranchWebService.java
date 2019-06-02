@@ -2,8 +2,10 @@ package webservices;
 
 import java.util.List;
 
-import model.Branch;
+import javax.jws.WebService;
 
+import model.Branch;
+@WebService(endpointInterface="webservices.IWebServiceBranch")
 public class BranchWebService implements IWebServiceBranch {
 
 	@Override
