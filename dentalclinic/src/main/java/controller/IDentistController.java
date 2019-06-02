@@ -11,4 +11,6 @@ public interface IDentistController {
 	public List <Dentist> getAllDentistByBranchId(int branchId);
 	public List <Dentist> getAllDentist();
 	public void RemoveDentistById(int id); 
+	public void EditDentist(Dentist dentist);
+	
 }

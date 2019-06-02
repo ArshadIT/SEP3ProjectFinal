@@ -5,11 +5,14 @@ import java.util.List;
 import javax.jws.WebService;
 
 import controller.DentistControllerImp;
+import controller.IDentistController;
 import model.Dentist;
 
-@WebService(endpointInterface="webservices.IWebServiceDentist")
+@WebService(endpointInterface = "webservices.IWebServiceDentist")
 public class DentistWebService implements IWebServiceDentist {
-
+ private IDentistController dentistcontroller;
+	public DentistWebService() {
+	 dentistcontroller = new DentistControllerImp();}
 	@Override
 	public void AddDentist(Dentist newDentist) {
 		
@@ -17,7 +20,7 @@ public class DentistWebService implements IWebServiceDentist {
 
 	@Override
 	public Dentist getDentisttByDentistId(int dentistId) {
-		DentistControllerImp dentistcontroller = new DentistControllerImp();
+		
 		
 		return dentistcontroller.getDentistByDentistId(dentistId);
 		
@@ -25,8 +28,12 @@ public class DentistWebService implements IWebServiceDentist {
 
 	@Override
 	public List<Dentist> getAllDentist() {
-		DentistControllerImp dentistcontroller = new DentistControllerImp();
 		return dentistcontroller.getAllDentist();
+	}
+
+	@Override
+	public void EditDentist(Dentist dentist) {
+		dentistcontroller.EditDentist(dentist);
 	}
 
 }
