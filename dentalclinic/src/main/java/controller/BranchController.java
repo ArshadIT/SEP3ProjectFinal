@@ -2,38 +2,44 @@ package controller;
 
 import java.util.List;
 
+import DAO.BranchDAO;
+import DAO.IBranchDAO;
 import model.Branch;
 
 public class BranchController implements IBranchController {
-
+	private IBranchDAO branchdao;
+	
+	 public BranchController() {
+		 branchdao = new BranchDAO();
+	 
+	 }
 	@Override
 	public void AddBranch(Branch branch) {
-		// TODO Auto-generated method stub
-
+		branchdao.AddBranch(branch);
 	}
 
 	@Override
 	public void deleteBranch(int branchId) {
-		// TODO Auto-generated method stub
-
+	
+		branchdao.deleteBranch(branchId);
 	}
+	
 
 	@Override
 	public void EditBranch(Branch branch) {
-		// TODO Auto-generated method stub
+		branchdao.EditBranch(branch);
 
 	}
 
 	@Override
 	public List<Branch> getAllBranch() {
 		// TODO Auto-generated method stub
-		return null;
+		return branchdao.getAllBranch();
 	}
-
 	@Override
 	public Branch getBranchById(int branchId) {
 		// TODO Auto-generated method stub
-		return null;
+		return branchdao.getBranchById(branchId);
 	}
 
 }

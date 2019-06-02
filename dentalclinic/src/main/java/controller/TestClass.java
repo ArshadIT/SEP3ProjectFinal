@@ -6,7 +6,8 @@ public class TestClass {
 		
 		
 		PatientControllerImp  pacimp = new PatientControllerImp();
-		
+		IDentistController den = new DentistControllerImp();
+		den.getAllDentist();
 	}
 
 }
