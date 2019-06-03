@@ -7,7 +7,9 @@ import DAO.IDentistDAO;
 import model.Dentist;
 
 public class DentistControllerImp implements IDentistController   {
-private IDentistDAO dentistDAO = new DentistDAO();
+
+	private IDentistDAO dentistDAO = new DentistDAO();
+	
 	public DentistControllerImp() {
 		
 	}

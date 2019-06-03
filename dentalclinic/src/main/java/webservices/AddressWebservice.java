@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.jws.WebService;
 
+import controller.AddressController;
 import controller.AppointmentController;
 import controller.IAddressController;
 import model.Address;
@@ -11,6 +12,12 @@ import model.Address;
 public class AddressWebservice implements IWebServiceAddress {
 
 	private IAddressController addressController;
+	
+	
+	public AddressWebservice () {
+		addressController = new AddressController();
+		
+	}
 	@Override
 	public void AddAdress(Address address) {
 	addressController.AddAdress(address);

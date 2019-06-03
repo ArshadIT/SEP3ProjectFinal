@@ -35,6 +35,11 @@ public class DentistWebService implements IWebServiceDentist {
 	public void EditDentist(Dentist dentist) {
 		dentistcontroller.EditDentist(dentist);
 	}
+	@Override
+	public List<Dentist> getAllDentistByBranchId(int branchId) {
+		// TODO Auto-generated method stub
+		return dentistcontroller.getAllDentistByBranchId(branchId);
+	}
 
 }
 

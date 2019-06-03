@@ -11,6 +11,11 @@ import model.Address;
 public class AddressController implements IAddressController {
 
 	private IAddressDAO addres;
+	
+	public AddressController() {
+addres = new AddressDAO();
+
+	}
 	@Override
 	public void AddAdress(Address address) {
 		IAddressDAO adress = new AddressDAO();

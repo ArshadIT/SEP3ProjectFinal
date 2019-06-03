@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class Appointment implements IAppointment {
+public class Appointment implements IAppointment, Serializable{
 
 	private int appointmentID;
 	private int dentistId;

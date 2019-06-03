@@ -5,9 +5,7 @@ xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
 <endpoint name = "PatientWebService" 
 implementation = "webservices.PatientWebService" 
 url-pattern="/getPatientByCprNo"/>
-<endpoint name = "PatientWebService" 
-implementation = "webservices.PatientWebService" 
-url-pattern="/getAllPatientByCprNo"/>
+
 
 
 <endpoint name = "PatientWebService" 
@@ -22,4 +20,7 @@ url-pattern="/getAppointment"/>
 <endpoint name = "PatientWebService" 
 implementation = "webservices.BranchWebService" 
 url-pattern="/getBranch"/>
+<endpoint name = "PatientWebService" 
+implementation = "webservices.ScheduleWebService" 
+url-pattern="/getSchedule"/>
 </endpoints>
